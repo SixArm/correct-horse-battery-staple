@@ -1,0 +1,3 @@
+#!/bin/sh
+set -euf
+shuf -n4 "$(dirname "$(readlink -f "$0")")/hej-bra-tack-våsagod.txt" | sed 's/$/-/' | tr -d '\n' | sed 's/-$/\n/'
